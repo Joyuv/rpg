@@ -35,4 +35,16 @@ form{
     border: 0.3em solid black;
     width: 2em;
     height: 2em;
+    margin: 0 0 0 0.5em;
+}
+#atributos h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.atributo:first-of-type{
+    margin: 0.5em 0 0 0.5em;
+}
+.atributo:last-of-type{
+    margin: 0 0 0.5em 0.5em;
 }
