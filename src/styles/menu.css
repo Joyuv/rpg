@@ -1,40 +1,37 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
-#container{
+#game, #criaperso{
     visibility: hidden;
 }
 body{
     height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
-}
-#menu{
-    border: 3px solid black;
-    height: 99%;
-    width: 99.5%;
     display: flex;
-    flex-flow: column nowrap;
+    border: 0.7em solid black;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    div{
-        height: 3em;
-        width: 8em;
-        background-color: grey;
-        border-radius: 1em; 
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        font-size: 2em;
-        font-weight: bold;
-        font-family: helvetica;
-    }
-    div:hover{
-        background-color: rgb(70, 70, 70);
-        color: white;
-    }
+    gap: 2em;
+    flex-flow: column nowrap;
+}
+div{
+    height: 3em;
+    width: 8em;
+    background-color: grey;
+    border-radius: 1em; 
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: helvetica;
+    box-shadow:0.5em 0.5em rgb(41, 41, 41);
+}
+
+div:hover{
+    background-color: rgb(41, 41, 41);
+    color: white;
+    box-shadow: 0.5em 0.5em grey;
+}

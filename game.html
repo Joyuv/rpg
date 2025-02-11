@@ -9,14 +9,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="menu">
-        <div id="iniciar" onclick="trocarCss(this.id)">Iniciar</div>
-        <div id="sobre" onclick="trocarCss(this.id)">Sobre</div>
+    <div class="menu" id="iniciar" onclick="trocarCss(this.id)">Iniciar</div>
+    <div class="menu" id="sobre" onclick="trocarCss(this.id)">Sobre</div>
+    <div id="game">
+        <div id="gamecont">
+            <div id="tela"></div>
+            <div id="side"></div>
+        </div>
+        <div id="infobarra"></div>
     </div>
-    <div id="container">
-        <div id="tela"></div>
-        <div id="side"></div>
+    <div id="criaperso">
+        <form action="" method="post">
+            <input type="text" placeholder="Nome do personagem">
+        </form>
+        <div id="atributos">
+            <h1 class="atributo">0</h1>
+            <h1 class="atributo">0</h1>
+            <h1 class="atributo">0</h1>
+            <h1 class="atributo">0</h1>
+        </div>
     </div>
-    <div id="infobarra"></div>
 </body>
 </html>
