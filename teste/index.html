@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Personagem</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="criacao.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Nome do Personagem</h1>
+        <div class="classes">
+            <label for="classe">Escolha a Classe:</label>
+            <select id="classe" name="classe">
+                <option value="mago">Mago</option>
+                <option value="ladrao">Ladrão</option>
+                <option value="guerreiro">Guerreiro</option>
+                <option value="paladino">Paladino</option>
+                <option value="mago_forense">Mago Forense</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <div class="atributos">
+            <h2>Selecione os Atributos</h2>
+            <label for="forca">Força:</label>
+            <input type="number" class="atributo" id="forca" name="forca" min="0" max="10" value="0">
+            <label for="destreza">Destreza:</label>
+            <input type="number" class="atributo" id="destreza" name="destreza" min="0" max="10" value="0">
+            <label for="resistencia">Resistência:</label>
+            <input type="number" class="atributo" id="resistencia" name="resistencia" min="0" max="10" value="0">
+            <label for="inteligencia">Inteligência:</label>
+            <input type="number" class="atributo" id="inteligencia" name="inteligencia" min="0" max="10" value="0">
+            <label for="deducao">Dedução:</label>
+            <input type="number" class="atributo" id="deducao" name="deducao" min="0" max="10" value="0">
+        </div>
+    </main>
+    <footer>
+        <div class="magias" id="magias">
+            <h2>Seletor de Magias</h2>
+            <label for="magia">Escolha uma Magia:</label>
+            <select id="magia" name="magia">
+                <option value="bola_de_fogo">Bola de Fogo</option>
+                <option value="teletransporte">Teletransporte</option>
+                <option value="cura">Cura</option>
+                <option value="escudo_magico">Escudo Mágico</option>
+                <option value="raio_congelante">Raio Congelante</option>
+            </select>
+        </div>
+    </footer>
+</body>
+</html>

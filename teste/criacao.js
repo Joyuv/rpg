@@ -3,6 +3,6 @@ while (true){
 }
 
 function getInner(){
-    const forca = document.getElementById("forca");
+    const forca = document.getElementsByName("forca");
     console.log(forca.value);
 }
