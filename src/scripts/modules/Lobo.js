@@ -1,10 +1,11 @@
-import Entidade from "./Entidade"
 import { d20, d6 } from "./dados"
+
+const Entidade = require("./Entidade")
 
 module.exports = class Lobo extends Entidade {
 
-  constructor(nome, nivel, forca, destreza, resistencia) {
-    super(nome, nivel, forca, destreza, resistencia)
+  constructor(nome, forca, nivel, destreza, resistencia) {
+    super(nome, forca, nivel, destreza, resistencia)
   }
 
   ataqueUm(resis) {
