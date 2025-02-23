@@ -1,17 +1,20 @@
 const Entidade = require("./Entidade.js")
 const d = require("./dados.js")
-module.exports = class Bandido extends Entidade{
-    constructor(nome, nivel, forca, destreza, resistencia){
+module.exports = class Bandido extends Entidade {
+    constructor(nome, nivel, forca, destreza, resistencia) {
         super(nome, nivel, forca, destreza, resistencia);
     }
 
-    ataqueUm(resis){
+    ataqueUm(resis) {
         const tentativa = (d.d20() + this.destreza);
-        console.log(tentativa)
-        if (tentativa > resis){
+        if (tentativa > resis) {
             const dano = d.d6() + this.forca;
-            return(dano)
+            return [dano, "O ladrão parte para cima e acerta uma coronhada em você com sua cimitarra"]
+        }
+        else {
+            return [0, "O ladrão corre em sua direção mas erra miserávelmente seu golpe"]
         }
 
     }
 }
+
