@@ -1,6 +1,7 @@
 import Entidade from "Entidade"
+import {d20, d6} from "./dados"
 
-module.exports = class Rato extends Entidade {
+export default class Rato extends Entidade {
 
   constructor(nome, nivel, forca, destreza, resistencia) {
     super(nome, nivel, forca, destreza, resistencia);
@@ -9,7 +10,7 @@ module.exports = class Rato extends Entidade {
   ataqueUm(resis) {
     const tentativa = d20(1) + this.destreza
     if (tentativa > resis) {
-      const dano = d6(math.floor(this.nivel / 2) + this.forca) - 2
+      const dano = d6(math.floor(this.nivel / 2) + math.floor(this.forca / 2)) - 2
       return [dano, "O rato corre em sua direção e pula sobre seu braço mordendo-o com suas presas"]
     }
     else {

@@ -2,7 +2,7 @@ import { d20, d6 } from "./dados"
 
 const Entidade = require("./Entidade")
 
-module.exports = class Lobo extends Entidade {
+export default class Lobo extends Entidade {
 
   constructor(nome, forca, nivel, destreza, resistencia) {
     super(nome, forca, nivel, destreza, resistencia)
