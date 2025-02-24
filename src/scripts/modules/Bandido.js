@@ -10,8 +10,15 @@ module.exports = class Bandido extends Entidade{
         console.log(tentativa)
         if (tentativa > resis){
             const dano = d.d6() + this.forca;
-            return(dano)
+            return([dano, "o ladrão te acerta com a coronha da espada dele"])
         }
+    }
 
+    ataqueDois(resis){
+        const tentativa= (d.d20() + this.destreza) - 4;
+        if (tentativa > resis){
+            const dano = d.d6(2) + this.forca
+            return([dano, "o ladrão te acerta com muita força com a lamina de sua espada"])
+        }
     }
 }
