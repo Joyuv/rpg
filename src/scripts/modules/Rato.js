@@ -1,5 +1,5 @@
-import Entidade from "Entidade"
-import {d20, d6} from "./dados"
+import Entidade from "./Entidade.js"
+import { d20, d6 } from "./dados.js"
 
 export default class Rato extends Entidade {
 
@@ -10,7 +10,7 @@ export default class Rato extends Entidade {
   ataqueUm(resis) {
     const tentativa = d20(1) + this.destreza
     if (tentativa > resis) {
-      const dano = d6(math.floor(this.nivel / 2) + math.floor(this.forca / 2)) - 2
+      const dano = d6(Math.floor(this.nivel / 2) + Math.floor(this.forca / 2)) - 2
       return [dano, "O rato corre em sua direção e pula sobre seu braço mordendo-o com suas presas"]
     }
     else {
