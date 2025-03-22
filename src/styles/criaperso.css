@@ -1,50 +1,94 @@
-.menu, #game{
+.menu,
+#game,
+#iniciar,
+#sobre {
     visibility: hidden;
+    height: 0;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 100vh;
     width: 100vw;
     border: 0.7em solid black;
 }
-#criaperso{
+
+#criaperso {
     /* height: 100%;
     width: 100%; */
     display: flex;
     flex-flow: column nowrap;
     gap: 2em;
+    align-items: center;
 }
-form{
+
+form {
     margin: 0 0 0 2em;
     height: 3em;
     display: flex;
     align-items: center;
 }
-#atributos{
+
+#atributos {
     height: 50%;
-    border: 0.3em solid black;
+    border: 0.3em solid #3C3D37;
     display: flex;
     gap: 1em;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.atributo{
-    border: 0.3em solid black;
+
+.atributo {
+    border: 0.3em solid #3C3D37;
     width: 2em;
     height: 2em;
-    margin: 0 0 0 0.5em;
 }
-#atributos h1{
+
+#atributos h1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.atributo:first-of-type{
-    margin: 0.5em 0 0 0.5em;
+
+#atributos span {
+    font-size: 1.2em;
+    font-weight: bold;
 }
-.atributo:last-of-type{
-    margin: 0 0 0.5em 0.5em;
+
+#atributos div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#atributos div {
+    span:last-of-type {
+        margin-left: 1em;
+    }
+
+    span:first-of-type {
+        margin-right: 1em;
+    }
+}
+
+#atributos div span {
+    border: none;
+    font-size: 2em;
+    user-select: none;
+}
+
+#atributos div span:hover {
+    cursor: pointer;
+}
+
+button {
+    height: 10em;
+    width: 20em;
 }

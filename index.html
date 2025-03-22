@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="src/styles/menu.css">
+    <script src="src/scripts/menu.js"></script>
+    <title>Document</title>
+    <script>
+        let pontos = 10
+        function altatributo(id, quant) {
+            const pontodiv = document.getElementById('pontos')
+            const div = document.getElementById(id)
+            const atributo = div.getElementsByClassName("atributo")[0]
+            if (pontos === 0 && quant != -1) {
+                alert("Sem pontos")
+            }
+            else {
+                const pontodivnv = Number(pontodiv.innerHTML) + (- quant);
+                const novoValor = Number(atributo.innerHTML) + quant;
+                if (novoValor > 0) {
+                    atributo.innerHTML = novoValor
+                    pontos = pontos - quant
+                    pontodiv.innerHTML = pontodivnv
+                }
+                else {
+                    alert("Atributo nulo é inválido")
+                }
+            }
+        }
+        function submit() {
+            const vida = Number(document.getElementById('resistencia').getElementsByClassName('atributo')[0].innerHTML) * 4
+            const json = {
+                'nome': document.getElementById('nome').value,
+                'vida': vida,
+                'vidaAtual': vida,
+                'forca': Number(document.getElementById('forca').getElementsByClassName('atributo')[0].innerHTML),
+                'resistencia': Number(document.getElementById('resistencia').getElementsByClassName('atributo')[0].innerHTML),
+                'inteligencia': Number(document.getElementById('inteligencia').getElementsByClassName('atributo')[0].innerHTML),
+                'agilidade': Number(document.getElementById('agilidade').getElementsByClassName('atributo')[0].innerHTML),
+            }
+            localStorage.setItem('personagem', JSON.stringify(json))
+            window.location.href = "game.html"
+        }
+    </script>
+    <link rel="stylesheet" type="" href="src/styles/main.css">
+</head>
+
+<body>
+    <div class="menu" id="iniciar" onclick="trocarCss(this.id)">Iniciar</div>
+    <div class="menu" id="sobre" onclick="trocarCss(this.id)">Sobre</div>
+    <div id="game">
+        <div id="gamecont">
+            <div id="tela"></div>
+            <div id="side"></div>
+        </div>
+        <div id="infobarra"></div>
+    </div>
+    <div id="criaperso">
+        <fieldset>
+            <legend>Nome</legend>
+            <input type="text" id="nome" placeholder="Nome do personagem">
+        </fieldset>
+        <div id="atributos">
+            <h1 id="pontos">10</h1>
+            <span>Força</span>
+            <div id="forca">
+                <span onclick="altatributo('forca', -1)">⮜</span>
+                <h1 id="forca" class="atributo">1</h1>
+                <span onclick="altatributo('forca', 1)">⮞</span>
+            </div>
+            <span>Resistência</span>
+            <div id="resistencia">
+                <span onclick="altatributo('resistencia', -1)">⮜</span>
+                <h1 id="resistencia" class="atributo">1</h1>
+                <span onclick="altatributo('resistencia', 1)">⮞</span>
+            </div>
+            <span>Inteligência</span>
+            <div id="inteligencia">
+                <span onclick="altatributo('inteligencia', -1)">⮜</span>
+                <h1 id="inteligencia" class="atributo">1</h1>
+                <span onclick="altatributo('inteligencia', 1)">⮞</span>
+            </div>
+            <span>Agilidade</span>
+            <div id="agilidade">
+                <span onclick="altatributo('agilidade', -1)">⮜</span>
+                <h1 id="agilidade" class="atributo">1</h1>
+                <span onclick="altatributo('agilidade', 1)">⮞</span>
+            </div>
+
+        </div>
+        <button onclick="submit()" type="">Submit</button>
+    </div>
+</body>
+
+</html>

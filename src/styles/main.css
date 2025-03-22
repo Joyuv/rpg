@@ -1,0 +1,12 @@
+* {
+  background-color: #1E201E;
+  border: 1px solid #3C3D37;
+  color: #DCD7C9;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+}
+
+body,
+html {
+  border: 0 solid transparent
+}

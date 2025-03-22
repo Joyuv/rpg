@@ -1,34 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style"rel="stylesheet" href="src/styles/menu.css">
-    <script src="src/scripts/menu.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="src/styles/jogo.css" rel="stylesheet">
+  <link rel="stylesheet" type="" href="src/styles/main.css">
+  <style>
+    #barravida {
+      height: auto;
+      width: auto;
+    }
+
+    #vida {
+      height: 1em;
+      width: 100%;
+      background-color: red;
+    }
+
+    .atributo {
+      flex-grow: 0;
+      height: 3em;
+      width: 3em;
+      max-height: 3em;
+      max-width: 3em;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #atributos {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="menu" id="iniciar" onclick="trocarCss(this.id)">Iniciar</div>
-    <div class="menu" id="sobre" onclick="trocarCss(this.id)">Sobre</div>
-    <div id="game">
-        <div id="gamecont">
-            <div id="tela"></div>
-            <div id="side"></div>
-        </div>
-        <div id="infobarra"></div>
+  <div id="container">
+
+    <div id="telaside">
+
+      <div id="tela">
+
+      </div>
+
+      <div id="side">
+
+      </div>
+
     </div>
-    <div id="criaperso">
-        <form action="" method="post">
-            <input type="text" placeholder="Nome do personagem">
-        </form>
-        <div id="atributos">
-            <h1 class="atributo">0</h1> <span>Força</span>
-            <h1 class="atributo">0</h1> <span>Resistência</span>
-            <h1 class="atributo">0</h1> <span>Inteligência</span>
-            <h1 class="atributo">0</h1> <span>Agilidade</span>
-            <h1 class="atributo">0</h1> <span>Dedução</span>
+
+    <div id="infobarra">
+      <fieldset id="barravida">
+        <legend id="hpinfo">0</legend>
+        <div id="vida">
+
         </div>
+      </fieldset>
+      <div id="atributos">
+        <fieldset id="força"><label for="forca" class="atributo"></label>
+          <legend>Força</legend>
+        </fieldset>
+        <fieldset id="resistencia"><label for="resistencia" class="atributo"></label>
+          <legend>Resistência</legend>
+        </fieldset>
+        <fieldset id="inteligencia"><label for="inteligencia" class="atributo"></label>
+          <legend>Inteligência</legend>
+        </fieldset>
+        <fieldset id="agilidade"><label for="agilidade" class="atributo"></label>
+          <legend>Agilidade</legend>
+        </fieldset>
+      </div>
     </div>
+
+  </div>
+
+  <script src="src/scripts/game/mainGame.js">
+
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,31 @@
+* {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#container #telaside {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#telaside #tela {
+  width: 69.5vw;
+  height: 68vh;
+}
+
+#telaside #side {
+  width: 29.5vw;
+  height: 68vh;
+}
+
+#infobarra {
+  width: 99vw;
+  height: 29.5vh;
+}
