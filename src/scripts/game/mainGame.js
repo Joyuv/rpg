@@ -27,3 +27,8 @@ mudarHp()
 setInterval(mudarHp, 300)
 atualizarAtributos()
 setInterval(atualizarAtributos, 10000)
+
+
+if (lugar === 'inicial') {
+  const historia = document.getElementById('historia').innerText = "Você acorda desnorteado em uma sela de prisão "
+}
